@@ -23,15 +23,17 @@ const Goal_Modify = () => {
         console.log(data)
         if (data.modification == "Change Percentage") {
             
-            lists.goalList[1]((list) => {
-                for (let index = 0; index < list.length; index++) {
+            lists.goalList[1](() => {
+                for (let index = 0; index < lists.goalList[0].length; index++) {
                     // const element = lists.goalList[0][index];
-                    if(list[index].goal==data.goal){
-                        list[index].percentage=data.percentage
-                        list[index].collected=(balance.savBalance[0])*parseFloat(data.percentage)/100
+                    if(lists.goalList[0][index].goal==data.goal){
+                        lists.goalList[0][index].percentage=data.percentage
+                        console.log(data.percentage,lists.goalList[0][index].collected)
+                        lists.goalList[0][index].collected=(balance.savBalance[0])*parseFloat(data.percentage)/100
+                        console.log(data.percentage,lists.goalList[0][index].collected)
                     }
                 }
-                return list
+                return lists.goalList[0]
             })
             console.log("change percentage successful")
         } else if (data.modification == "Change Cost") {

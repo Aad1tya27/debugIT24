@@ -37,18 +37,18 @@ const Dashboard = () => {
 
     // }, [lists.goalList[0]])
 
-    useEffect(() => {
-        // lists.goalList[1](() => [...lists.goalList[0], { goal: data.goal, limit: data.limit, percentage: data.percentage, collected: (balance.savBalance[0])*parseFloat(data.percentage)/100 }]);
+    // useEffect(() => {
+    //     // lists.goalList[1](() => [...lists.goalList[0], { goal: data.goal, limit: data.limit, percentage: data.percentage, collected: (balance.savBalance[0])*parseFloat(data.percentage)/100 }]);
     
-        lists.goalList[1](() => {
-          console.log("but why")
-          for (const element of lists.goalList[0]) {
-              element.collected = (value.savBalance[0]) * parseFloat(element.percentage) / 100
-          }
-          return lists.goalList[0]
-      })
+    //     lists.goalList[1](() => {
+    //       console.log("but why")
+    //       for (const element of lists.goalList[0]) {
+    //           element.collected = (value.savBalance[0]) * parseFloat(element.percentage) / 100
+    //       }
+    //       return lists.goalList[0]
+    //   })
     
-    }, [value.savBalance[0]])
+    // }, [value.savBalance[0]])
 
     return (
         <>
