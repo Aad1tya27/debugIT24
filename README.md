@@ -8,4 +8,4 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## You can find the Project Video in the directory named "Project Video" :)
-## Deployed project link : https://debug-it-24.vercel.app/dashboard
+## Deployed project link : https://debug-it-24.vercel.app
