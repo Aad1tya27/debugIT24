@@ -45,6 +45,7 @@ const Transaction = () => {
             console.log("receive successful")
         } else if (data.type == "Pay") {
             lists.totalExpenses[1](parseFloat(lists.totalExpenses[0]+ data.subCurrBalance))
+            balance.currBalance[1](parseFloat(balance.currBalance[0]- data.subCurrBalance))
             if(data.expense=="notincluded"){
                 balance.currBalance[1](parseFloat(balance.currBalance[0]-data.subCurrBalance))
                 console.log("notincluded successful")
