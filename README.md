@@ -1,11 +1,22 @@
-# React + Vite
+# Budget Buddy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Budget Buddy is a revolutionary e-wallet system designed to empower users in managing their finances and achieving financial wellness. 
+## GOALS
 
-Currently, two official plugins are available:
+### Personalized Budgeting: 
+Budget Buddy provides personalized budgeting tools tailored to individual spending habits. Users can set budgets for different categories such as partying, drinks, and junk food.
+### Spending Restrictions: 
+The platform enables users to set spending restrictions based on their current budget. It permit users to exceed their budget limits.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### TECHNOLOGY USED 
+Tech Stack: HTML, CSS, JavaScript
+<br>
+Frameworks: Tailwind CSS
+<br>
+Libraries: React
 
-## You can find the Project Video in the directory named "Project Video" :)
-## Deployed project link : https://debug-it-24.vercel.app
+### You can find the Project Video in the directory named "Project Video" :)
+### Deployed project link :
+ ``` 
+ https://debug-it-24.vercel.app 
+ ```
