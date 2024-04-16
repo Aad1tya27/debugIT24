@@ -145,7 +145,7 @@ const Transaction = () => {
                                 min: 1,
                                 validate: (value)=>{
                                     if(expenseModifyWatch=="notincluded"){
-                                        if(balance.currBalance[0]>parseFloat(value)){
+                                        if(balance.currBalance[0]>=parseFloat(value)){
                                             
                                             return true
                                         }
@@ -156,7 +156,7 @@ const Transaction = () => {
                                             if (Object.hasOwnProperty.call(lists.expenseList[0], key)) {
                                                 const element = lists.expenseList[0][key];
                                                 if(element.expense==expenseModifyWatch){
-                                                    if(parseFloat(value)<element.currLimit){
+                                                    if(parseFloat(value)<=element.currLimit){
                                                         return true
                                                     }
                                                     else{
