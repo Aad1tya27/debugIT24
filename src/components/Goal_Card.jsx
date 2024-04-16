@@ -22,7 +22,7 @@ const Goal_Card = (props) => {
 
   return (
     <>
-    {collected>props.limit
+    {props.collected>=props.limit
     ?
     <div className='px-6 flex items-center justify-between card bg-green-300 w-[40vw] h-[8vh] mb-3'>
       <div>{props.goal}</div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
@@ -18,7 +18,7 @@ const Goal_Modify = () => {
 
     const navigate = useNavigate()
     const goalModifyWatch = watch('modification', "Delete")
-
+    // const collectRef=useRef(0)
     const onSubmit = (data) => {
         console.log(data)
         if (data.modification == "Change Percentage") {

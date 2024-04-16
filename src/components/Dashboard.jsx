@@ -11,44 +11,24 @@ const Dashboard = () => {
     // const buttonRef = useRef(null)
     const value = useContext(profileContext)
     const lists = useContext(dashboardContext)
-    // const [totalExpenses, setTotalExpenses] = useState(0)
-    // useEffect(() => {
+    // const collectRef=useRef(0)
+    // let tempCollectArray={}
 
-    //     if (lists.expenseList[0].length > 0) {
-    //         for (const element of lists.expenseList[0]) {
-    //             lists.totalExpenses[1]((sum) => sum + (element.limit - element.currLimit))
-    //             // setTotalExpenses((sum) => sum + (element.limit - element.currLimit))
-    //             console.log("hi", element.currLimit, element.limit)
-    //             // sum=sum+element.limit-element.currLimit
-    //             // console.log(sum, element.limit, element.currLimit,element.limit-element.currLimit )
-    //         }
-    //     }
 
-    //     // if(lists.expenseList[0]>1){
-    //     //     buttonRef.current.style.position="";
-    //     //     buttonRef.current.style.bottom="";
-    //     // }
-    //     // console.log(sum, lists.expenseList[0].length>0 ) 
-
-    //     console.log(lists)
-    // }, [lists.expenseList])
-
-    // useEffect(() => {
-
-    // }, [lists.goalList[0]])
-
-    // useEffect(() => {
-    //     // lists.goalList[1](() => [...lists.goalList[0], { goal: data.goal, limit: data.limit, percentage: data.percentage, collected: (balance.savBalance[0])*parseFloat(data.percentage)/100 }]);
-    
-    //     lists.goalList[1](() => {
-    //       console.log("but why")
-    //       for (const element of lists.goalList[0]) {
-    //           element.collected = (value.savBalance[0]) * parseFloat(element.percentage) / 100
-    //       }
-    //       return lists.goalList[0]
-    //   })
-    
-    // }, [value.savBalance[0]])
+    useEffect(() => {
+        lists.goalList[1](() => {
+            console.log("but why")
+            // goal.collected=((value.savBalance[0])*parseFloat(goal.percentage)/100)
+            for (const element of lists.goalList[0]) {
+                element.collected = (value.savBalance[0]) * parseFloat(element.percentage) / 100
+                // if(goal==element){
+                //     collector= (value.savBalance[0]) * parseFloat(element.percentage) / 100
+                // }
+            }
+            return lists.goalList[0]
+        })
+        console.log("nice re render")
+    }, [value.savBalance])
 
     return (
         <>
@@ -75,9 +55,11 @@ const Dashboard = () => {
                             </h2>
                             {(lists.goalList[0].length > 0) ?
 
-
+                                
                                 lists.goalList[0].map((goal) => {
-                                    return <Goal_Card key={goal.goal} collected={goal.collected} percentage={goal.percentage} goal={goal.goal} limit={goal.limit} />
+                                    // let collector="";
+                                    
+                                    return <Goal_Card key={goal.goal}  collected={((value.savBalance[0])*parseFloat(goal.percentage)/100)} percentage={goal.percentage} goal={goal.goal} limit={goal.limit} />
                                 })
                                 :
                                 <span className='p-10 text-center text-2xl '>Add Goals by clicking on the Edit Button</span >
@@ -100,6 +82,7 @@ const Dashboard = () => {
                             {(lists.expenseList[0].length > 0) ?
 
                                 lists.expenseList[0].map((expense) => {
+                                    
                                     return <Expense_Card key={expense.expense} expense={expense.expense} currLimit={expense.currLimit} limit={expense.limit} />
                                 })
 
