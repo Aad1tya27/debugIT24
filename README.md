@@ -15,7 +15,12 @@ Frameworks: Tailwind CSS
 <br>
 Libraries: React
 
-### You can find the Project Video in the directory named "Project Video" :)
+### You can download the video from the directory named "Project Video" or watch it Online:
+ ``` 
+https://drive.google.com/file/d/124XpleN4iwKvFE50sGB8p38LMkOr4LIe/view?usp=sharing
+ ```
+
+
 ### Deployed project link :
  ``` 
  https://debug-it-24.vercel.app 
